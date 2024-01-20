@@ -1,0 +1,47 @@
+@baseURL = http://localhost:3030
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzM4MTk0NzdjYzAxYjg5YmE1YmZjY2EiLCJlbWFpbCI6ImthbGxlQGFyY2FkYS5maSIsImlhdCI6MTY2NDcyNzE0OSwiZXhwIjoxNjY0ODEzNTQ5fQ.YZxcDJowm1GpppOHyMb5un5LIFrvVq6BmCBHSAyba68
+GET {{baseURL}}/bookings/
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/bookings/own
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/bookings/633817c41286d00cc6976422
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+DELETE  {{baseURL}}/bookings/63381aa81732e0a8d7d275f1
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+POST {{baseURL}}/bookings/
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id": "6338169a46382679a7234766",
+    "startDate": "2021-12-19",
+    "endDate": "2021-12-20"
+}
+
+###
+
+PATCH  {{baseURL}}/bookings/63382dd2ffc62dd07b958350
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id": "6338169a46382679a7234766",
+    "startDate": "2021-12-01",
+    "endDate": "2021-12-02"
+}
