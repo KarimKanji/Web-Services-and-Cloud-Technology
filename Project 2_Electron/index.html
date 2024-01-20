@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+
+  <script>
+    import 'bootstrap';
+  </script>
+
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+  <link href="./bootstrap.min.css" rel="stylesheet">
+
+  <title>Kanji&Fallström-UI</title>
+</head>
+
+<body>
+
+
+  <!-- START OF BOOTSTRAP -->
+  <main>
+    <div class="container py-4">
+      <header class="pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg> -->
+          <span class="fs-4">Kanji & Fallström Services Ab</span>
+        </a>
+        <br>
+        <span class="fs-5"><button id="btn-logout" class="btn btn-danger btn-sm" type="button">Logout</button></span>
+      </header>
+
+      <div id="loginContainer" class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-3">
+          <h1 class="display-5 fw-bold">Login to access our services</h1>
+          <br>
+          <br>
+          <!-- <div class="fakeimg" style="height:100px;">Image</div> -->
+          <div id="login">
+            <input id="email" placeholder="E-mail">
+            <input type="password" id="password" placeholder="Password">
+            <br>
+            <br>
+            <input class="btn btn-primary btn-lg" id="btn-login" type="button" value="Login">
+            <br>
+            <br>
+            <div id="msg" style="color:red;"></div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row align-items-md-stretch">
+          <div id="servicesContainer" class="col-md-6">
+            <style>
+              #servicesContainer {
+                display: none;
+              }
+            </style>
+            <div class="h-100 p-5 bg-light border rounded-3">
+              <h2>Choose cabin</h2>
+              <p>Your cabins are displayed on the list below, please select a cabin</p>
+              <br>
+              <div id="owned">You dont currently own any cabins</div>
+              <br>
+              <h2>Choose a service</h2>
+              <br>
+              <div id="services">You dont currently own any cabins</div>
+              <br>
+              <div class="input-group date" data-provide="datepicker">
+                <input id="dateSelect" type="date" class="form-control">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                </div>
+            </div>
+            <br>
+              <button id="btn-save" value="Save" class="btn btn-outline-secondary" type="button">Book</button>
+            </div>
+          </div>
+          <div id="ordersContainer" class="col-md-6">
+            <style>
+              #ordersContainer {
+                display: none;
+              }
+            </style>
+            <div class="h-100 p-5 bg-light border rounded-3">
+              <h2>Orders</h2>
+              <div id="orders">You dont currently have any orders</div>
+              <br>
+              <button id="btn-edit" class="btn btn-outline-secondary" type="button">Edit</button>
+              <button id="btn-delete" class="btn btn-outline-secondary" type="button">Delete</button>
+              <br><br>
+              
+
+            <div id="displayUpdate">
+              <p> Enter new date for your order:</p>
+              <style>
+                 #displayUpdate {
+                display: none;
+                }
+              </style>
+              <input id="dateUpdate" type="date" class="form-control">
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-th"></span>
+                    <br>
+                    <button id="btn-update" class="btn btn-outline-secondary" type="button">Update</button>
+                </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+
+        <footer class="pt-3 mt-4 text-muted border-top">
+          &copy; 2022 Kanji&Fallström
+        </footer>
+      
+  </main>
+  <!-- END OF BOOTSTRAP -->
+
+
+  <!-- <div id="edit">
+      <input type="hidden" id="0">
+      <textarea id="cabin-text" placeholder="Write cabin info..."></textarea><br>
+      <input id="btn-save" type="button" value="Save">
+    </div> -->
+
+  <!-- <div id="notes">No notes</div> -->
+  <!-- <div class="header">
+    <h1 id="title">Kanji & Fallström <br> Services Ab</h1>
+    <p>Login to gain access to our services</p>
+  </div> -->
+
+  <!-- <div class="topnav">
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#">Link</a>
+      <a href="#" style="float:right">Link</a>
+    </div> -->
+
+
+
+
+  <div class="footer">
+
+
+    <!-- <div id="edit">
+      <input type="hidden" id="0">
+      <textarea id="note-text" placeholder="Write note here..."></textarea><br>
+      <input id="btn-save" type="button" value="Save">
+    </div>
+    <div id="notes">No notes</div> -->
+    
+  </div>
+
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
+</html>
