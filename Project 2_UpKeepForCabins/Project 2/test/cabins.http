@@ -1,0 +1,10 @@
+
+@baseUrl= https://flask-test-kanjikar.rahtiapp.fi/
+
+###
+
+GET {{baseUrl}}/cabins
+Content-Type: application/json
+
+
+###

@@ -1,0 +1,29 @@
+# For use with the Rest Client VSCode extension (humao.rest-client)
+
+@baseUrl=https://flask-test-kanjikar.rahtiapp.fi/
+
+GET {{baseUrl}}
+
+###
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+
+###
+
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{ 
+    "testkey": "Test value"
+}
+
+###
+
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{ 
+    "email": "ndsadasdasaasdasdsasdasddsasdasdaki@arcada.fi"
+}

@@ -1,0 +1,49 @@
+@baseURL = https://wom22-projekt2-kanjikar-fallstrs.azurewebsites.net/
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzRjNjVhNjk4MTkwZmIwMTQwZjczZjUiLCJlbWFpbCI6Imthbmppa2FyQGFyY2FkYS5maSIsImlhdCI6MTY2NTk1MTE1NywiZXhwIjoxNjY2MDM3NTU3fQ.9nX6mgyAOvAT5uIGdUl1OlnABPjMRlsklr-gHOXkd6o
+
+###
+GET {{baseURL}}/cabins/
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/cabins/6343d374da0e4f5d798749ee
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/cabins/owned/
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+DELETE  {{baseURL}}/cabins/633815a8f66a66dcb4db0722
+Content-Type: application/json
+Authorization: {{token}}
+
+
+###
+
+POST {{baseURL}}/cabins/
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "cabin": "Villa karim",
+    "location": "kontulankuja123",
+    "price": 10002
+
+}
+
+###
+
+PATCH  {{baseURL}}/cabins/633815a8f66a66dcb4db0722
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "price": 10000
+}

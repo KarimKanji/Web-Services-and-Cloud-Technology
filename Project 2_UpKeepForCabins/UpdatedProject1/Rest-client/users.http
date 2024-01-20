@@ -1,0 +1,57 @@
+@baseURL = https://wom22-projekt2-kanjikar-fallstrs.azurewebsites.net
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzRjNjVhNjk4MTkwZmIwMTQwZjczZjUiLCJlbWFpbCI6Imthbmppa2FyQGFyY2FkYS5maSIsImlhdCI6MTY2NTk1MTE1NywiZXhwIjoxNjY2MDM3NTU3fQ.9nX6mgyAOvAT5uIGdUl1OlnABPjMRlsklr-gHOXkd6o
+
+### ADMIN GET ALLA USERS
+GET {{baseURL}}/users
+Content-Type: application/json
+Authorization: {{token}}
+
+### Get en specifik user
+
+GET {{baseURL}}/users/63380295285550e679aea1c6
+Content-Type: application/json
+Authorization: {{token}}
+
+
+### Skapa ny användare get delete post patch
+//Delete tar bort egen profil
+
+DELETE {{baseURL}}/users/
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+POST {{baseURL}}/users/
+Content-Type: application/json
+
+{   
+    "firstName": "karim",
+    "lastName":"fon",
+    "email": "kanjikar@arcada.fi",
+    "password": "Password123"
+
+}
+
+### Login
+
+POST {{baseURL}}/users/login
+Content-Type: application/json
+
+{
+    "email": "kanjikar@arcada.fi",
+    "password": "Password123"
+
+}
+
+### 
+
+PATCH  {{baseURL}}/users/
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "firstName": "sebastian",
+    "lastName": "fallstrom1",
+    "email": "asdasdas@ghmail.com"
+}

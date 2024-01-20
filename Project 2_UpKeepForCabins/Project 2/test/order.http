@@ -1,0 +1,43 @@
+
+@baseUrl=https://flask-test-kanjikar.rahtiapp.fi/
+
+###
+
+GET {{baseUrl}}/orders
+Content-Type: application/json
+
+###
+
+POST {{baseUrl}}/orders
+Content-Type: application/json
+
+{ 
+    "date": "2022-11-02",
+    "service_id": "fc227e2b-1cca-4asd034-ba2b-e9aaa72b2eaf",
+    "location": "Villa Basse",
+    "service": "Cleaning"
+}
+
+###
+
+DELETE {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+    "id": "97ccfb5a-99b7-432b-be28-6537917877f6"
+}
+
+###
+
+PATCH {{baseUrl}}/orders
+Content-Type: application/json
+
+{
+
+    "id": "af88fa90-f546-4f77-b5e0-52a80084b694",
+    "date": "2022-11-04", 
+    "location": "tanantestissa uusi mesta",
+    "service": "jess"
+
+}
+

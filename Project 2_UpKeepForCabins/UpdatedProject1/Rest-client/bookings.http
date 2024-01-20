@@ -1,0 +1,47 @@
+@baseURL = https://wom22-projekt2-kanjikar-fallstrs.azurewebsites.net
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzM4MTk0NzdjYzAxYjg5YmE1YmZjY2EiLCJlbWFpbCI6ImthbGxlQGFyY2FkYS5maSIsImlhdCI6MTY2NTM4OTE5OCwiZXhwIjoxNjY1NDc1NTk4fQ.zGTXRQ5K1gxHFloACWs43hFjGCaxMThWXOZz9YTXz3A
+GET {{baseURL}}/bookings/
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/bookings/own
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+GET {{baseURL}}/bookings/633817c41286d00cc6976422
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+DELETE  {{baseURL}}/bookings/63381aa81732e0a8d7d275f1
+Content-Type: application/json
+Authorization: {{token}}
+
+###
+
+POST {{baseURL}}/bookings/
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id": "6343d374da0e4f5d798749ee",
+    "startDate": "2021-12-19",
+    "endDate": "2021-12-20"
+}
+
+###
+
+PATCH  {{baseURL}}/bookings/63382dd2ffc62dd07b958350
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+    "id": "6338169a46382679a7234766",
+    "startDate": "2021-12-01",
+    "endDate": "2021-12-02"
+}

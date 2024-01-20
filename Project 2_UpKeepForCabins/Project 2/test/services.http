@@ -1,0 +1,42 @@
+
+
+@baseUrl=https://flask-test-kanjikar.rahtiapp.fi/
+
+###
+
+GET {{baseUrl}}/services
+Content-Type: application/json
+
+###
+
+
+POST {{baseUrl}}/services
+Content-Type: application/json
+
+{ 
+    "location": "kunkainsaddddasdsasski@arcada.fi",
+    "service": "Damsugndddddasdaddingggg"
+}
+
+
+###
+
+DELETE {{baseUrl}}/services
+Content-Type: application/json
+
+{
+    "id": "97ccfb5a-99b7-432b-be28-6537917877f6"
+}
+
+###
+
+
+PATCH {{baseUrl}}/services
+Content-Type: application/json
+
+{
+    "id": "99d5eeea-1ddb-4300-a895-e8c20dd455e1",
+    "location": "tanantestissa uusi mestaasdaasdasdsd",
+    "service": "1123"
+
+}
